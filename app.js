@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 db.then(dbInstance => { 
     app.set('db', dbInstance); 
-    app.use('/', indexRouter(dbInstance)); 
+    app.use('/api/user', indexRouter(dbInstance)); 
     
 }).catch(err => {
     console.error('Error al conectar a la base de datos:', err);
